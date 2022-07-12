@@ -10,22 +10,13 @@
 const maxCallback = ( acc, cur ) => Math.max( acc.x || acc, cur.x );
 
 const resultAll = [{ x: 22 }, { x: 42 }].reduce(maxCallback, 23); // 42
-// const resultOneList = [{ x: 22 }].reduce(maxCallback, 23); // 23
-const resultOneList = [{ x: 22 }].reduce((acc, cur, i) => {
-    console.log(acc, cur, i)
-    return Math.max(acc.x || acc, cur.x);
-}); // 23
-// const resultEmpty = [].reduce(maxCallback, 23); // 23
+const resultOneList = [{ x: 22 }].reduce(maxCallback, 23); // 23
+const resultEmpty = [].reduce(maxCallback, 23); // 23
 
-console.log(Math.max({x: 50}, 50));
+console.log(resultAll, resultOneList, resultEmpty);
 
-// console.log(resultAll, resultOneList, resultEmpty);
-
-
-// const maxCallback = ( acc, cur ) => Math.max( acc.x, cur.x );
+// const resultAll = [{ x: 22 }, { x: 42 }].reduce(maxCallback); // 42
+// const resultOneList = [{ x: 22 }].reduce(maxCallback); // { x: 22}
+// // const resultEmpty = [].reduce(maxCallback); // TypeError
 //
-// const resultAll = [{ x: 22 }, { x: 42 }].reduce(maxCallback, { x: 0 }); // 42
-// const resultOneList = [{ x: 22 }].reduce(maxCallback, { x: 0 }); // { x: 22 }
-// const resultEmpty = [].reduce(maxCallback, { x: 0 }); // TypeError
-
-// console.log(resultAll, resultOneList, resultEmpty);
+// console.log(resultAll, resultOneList);
