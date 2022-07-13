@@ -27,9 +27,9 @@ console.log(animals); // [ 'ant', 'bison', 'camel', 'duck', 'elephant' ]
 const objects = [{ name: 'tang' }, { name: 'min' }, { name: 'jae' }];
 const objectsSlice1 = objects.slice();
 
-objectsSlice1[0].name = 'tang25';
+objects[0].name = 'tang25';
 
-console.log('');
+console.log('//');
 console.log(objectsSlice1); // [ { name: 'tang25' }, { name: 'min' }, { name: 'jae' } ]
 console.log(objects); // [ { name: 'tang25' }, { name: 'min' }, { name: 'jae' } ]
 
