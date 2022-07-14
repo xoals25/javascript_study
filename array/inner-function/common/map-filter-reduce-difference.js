@@ -13,9 +13,9 @@ const exceptionFruits = ['오렌지'];
 function makeFruitSalad(fruits, etcIngredients, exceptionFruits) {
     return fruits
         .filter(fruit => !exceptionFruits.includes(fruit))
-        .map(fruit => `${fruit} 3조각`)
-        .reduce((prev, curr) => curr + ' ' + prev, `${etcIngredients.toString()} 화채`)
-        .replace(/,/g, '');
+        .map(fruit => [`${fruit} 1조각`, `${fruit} 1조각`, `${fruit} 1조각`])
+        .reduce((prev, curr) => `${curr[0].split(' ')[0]} ${curr.length}조각  ${prev}`,
+            `${etcIngredients.toString()} 화채`);
 }
 
 function getFruitSaladIngredients(fruits, etcIngredients, exceptionFruits) {
