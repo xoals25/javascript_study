@@ -20,6 +20,11 @@ const result2 = alpha2.concat(1, [2, 3]);
 console.log(alpha2); // 결과: [ 'a', 'b', 'c' ]
 console.log(result2); // 결과: ['a', 'b', 'c', 1, 2, 3]
 
+const result21 = alpha2.concat([1, 2, [3, 4]]);
+
+console.log(alpha2); //[ 'a', 'b', 'c' ]
+console.log(result21); //[ 'a', 'b', 'c', 1, 2, [ 3, 4 ] ]
+
 /**
  * 배열에 객체 이어 붙이기
  * */
